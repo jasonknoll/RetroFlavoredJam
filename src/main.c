@@ -60,22 +60,16 @@ int main() {
 
     SPRITES_8x8;
 
-    int8_t test = test_func();
+    set_sprite_data(0, 1, sprite);
+    set_sprite_tile(0, 0);
+    move_sprite(0, puck_x, puck_y);
+    SHOW_SPRITES;
 
-    // Setting test to 1 in the assembly
-    if (test == 1) {
-        set_sprite_data(0, 1, sprite);
-        set_sprite_tile(0, 0);
-        move_sprite(0, puck_x, puck_y);
-        SHOW_SPRITES;
-
-        // ERROR does not show window with sprite attached
-        set_win_data(0, 1, sprite);
-        move_win(7, 154);
-        SHOW_WIN; // bottom GUI window
-    }
-
-    joypad();
+    // ERROR does not show window with sprite attached
+    set_win_data(0, 1, sprite);
+    move_win(7, 154);
+    SHOW_WIN; // bottom GUI window
+    
 
     for (;;) {
         // TODO main gameplay loop
