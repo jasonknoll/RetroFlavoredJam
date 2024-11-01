@@ -68,6 +68,11 @@ int main() {
         set_sprite_tile(0, 0);
         move_sprite(0, puck_x, puck_y);
         SHOW_SPRITES;
+
+        // ERROR does not show window with sprite attached
+        set_win_data(0, 1, sprite);
+        move_win(7, 154);
+        SHOW_WIN; // bottom GUI window
     }
 
     joypad();
@@ -75,6 +80,8 @@ int main() {
     for (;;) {
         // TODO main gameplay loop
         // TODO handle input
+        // TODO check state
+        // TODO add player(s)
 
         check_input();
         move_sprite(0, puck_x, puck_y);
