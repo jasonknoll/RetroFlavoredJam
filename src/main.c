@@ -79,6 +79,8 @@ int main() {
 
         check_input();
         move_sprite(0, puck_x, puck_y);
+
+        vsync(); // might not be needed idk
     }
 
     return 0;
