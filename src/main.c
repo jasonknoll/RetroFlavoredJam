@@ -9,9 +9,10 @@
 // Add test tilemap background
 // Add test player sprite
 // Scroll background based on player position
-// Add puck
+// [x] Add puck
 // Add ability to pick up and release puck
-// Add net
+// Add nets
+// Add ability to score a goal
 // Add CPU opponent 
 // Add CPU opponent goalie
 // Add program state
@@ -19,9 +20,13 @@
 // From the test_func.s file
 extern int8_t test_func();
 
+// X = loc + 8
+// Y = loc + 16
+// (0, 0) = (8, 16)
 uint8_t puck_x = 8;
 uint8_t puck_y = 16;
 
+// Move things to module files?
 void check_input() {
     if (joypad() & J_A) {
 
@@ -60,12 +65,15 @@ int main() {
 
     SPRITES_8x8;
 
+    // TODO draw background
+
     set_sprite_data(0, 1, sprite);
     set_sprite_tile(0, 0);
     move_sprite(0, puck_x, puck_y);
     SHOW_SPRITES;
 
     // ERROR does not show window with sprite attached
+    // TODO look at examples
     set_win_data(0, 1, sprite);
     move_win(7, 154);
     SHOW_WIN; // bottom GUI window
@@ -73,8 +81,7 @@ int main() {
 
     for (;;) {
         // TODO main gameplay loop
-        // TODO handle input
-        // TODO check state
+        // TODO check game state
         // TODO add player(s)
 
         check_input();
