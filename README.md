@@ -33,6 +33,10 @@ TODO
 
 TODO
 
+Make sure to have GBDK installed somewhere and that you have adjusted the `GBDK_HOME` directory in the `Makefile` properly. In the project's root directory, run `make` and the project should output the *.gb ROM file in the `build/` directory.
+
+`compile_flags.txt` is for the clangd server extension in VS Code.
+
 
 ## Outcome
 

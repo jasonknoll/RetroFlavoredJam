@@ -9,6 +9,7 @@
 // Add CPU opponent 
 // Add CPU opponent goalie
 
-void main() {
+int main() {
 
+    return 0;
 }

@@ -1,0 +1,2 @@
+-Ic:/gbdk/include
+-std=c99
