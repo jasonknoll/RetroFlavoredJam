@@ -34,5 +34,5 @@ $(BINS):	$(CSOURCES) $(ASMSOURCES)
 	$(LCC) $(LCCFLAGS) -o $@ $(CSOURCES) $(ASMSOURCES)
 
 clean:
-	rm -f *.o *.lst *.map *.gb *.ihx *.sym *.cdb *.adb *.asm *.noi *.rst
+	rm -f *.o *.lst *.map build/*.gb *.ihx *.sym *.cdb *.adb *.asm *.noi *.rst
 
